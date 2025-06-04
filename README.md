@@ -1,5 +1,5 @@
   Esse é um repositório criado com a intenção de armazenar e expor nosso resultado no trabalho solicitado pelo Prof. Dr. Eduardo Pena na disciplina de Banco de Dados, do 2° período do curso de Bacharel em Ciência Da Computação, na Universidade Tecnológica Federal do Paraná no Campos de Campo Mourão. 
-  Esse trabalho foi feito em um grupo de 5 alunos: Alan, João do Nascimento, Luis Felipe Gomes, Orlando Seiti Enokida Junior.
+  Esse trabalho foi feito em um grupo de 5 alunos: Alan, João do Nascimento, Luis Felipe Gomes, Orlando Seiti Enokida Junior, Pedro Henrique Mansano Franzin.
   O trabalho será dividido em 6 Fases, sendo elas especificadas logo abaixo:
     --Fase 1. Levantamento de Requisitos. Os grupos devem escolher um dos temas sugeridos e
     realizar um estudo detalhado do domínio do problema. O objetivo é entender quais
