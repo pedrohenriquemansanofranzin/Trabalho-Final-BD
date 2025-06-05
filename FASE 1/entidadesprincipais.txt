@@ -1,0 +1,10 @@
+Usuario // id_usuario, nome, data_cadastro, email
+Filme // id_filme, titulo, ano_lancamento, genero, duracao
+Série // id_serie, titulo, ano_lancamento, genero, temporadas
+Episodio // id_episodio, id_serie, temporada, numero_episodio, titulo, duracao
+Gênero // id_genero, nome_genero
+
+Post ->avaliação dos usuários (Média), avaliação dos críticos(Média), data de criação, duração, quem inseriu, gênero, mídia
+Avaliação -> Quem avaliou, Post, nota, quando avaliou
+Like na avaliação -> Quem deu like, avaliação
+Sugestões -> Usuário, nome da mídia, tipo da mídia,
