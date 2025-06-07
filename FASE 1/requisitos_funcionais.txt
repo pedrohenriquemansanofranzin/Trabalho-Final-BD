@@ -1,0 +1,5 @@
+Permitir realizar avaliações.
+Permitir Ler outras avaliações.
+Permitir dar likes em outras avaliações.
+CRUDS de cada entidade.
+Permitir que o usuário envie sugestões de filmes para serem avaliados
