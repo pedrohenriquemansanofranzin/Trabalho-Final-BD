@@ -1,0 +1,3 @@
+Críticos (Inserir nota)
+Usuários (Consultar)
+Gestores (Inserir filmes)
