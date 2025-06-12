@@ -1,16 +1,12 @@
-ENTIDADES
-Usuario
-Filme
-Série
-Episodio
-Gênero
-Post
-Avaliação
-Like na avaliação
-RELACIONAMETOS
-Episódio relação 1:n série
-Série/filme relação 1:n com gênero
-Post relação 1:n com série/filme
-Post relação 1:n com usuário (Quem inseriu)
-Avaliação resultado de Post n:m com usuário (Usuário podem avaliar vários posts, um post pode ser avaliado por vários posts)
-Like na avaliação resultado de Avaliação n:m com usuário (Usuário dar likes em várias avaliações, uma avaliação pode receber likes de vários usuários)
+Os primeiros relacionamentos identificados foram: 
+  - Série 1:n Episódio. 
+  - Série 1:n Gênero. 
+  - Filme 1:n Gênero. 
+  - Série 1:n Gestor de Conteúdo. 
+  - Filme 1:n Gestor de Conteúdo. 
+  - Likes de usuário é resultado de uma relação de n:m entre Usuário e 
+  Avaliação. 
+  - Likes de críticos é resultado de uma relação n:m entre crítico e 
+  avaliação 
+  - Avaliação 1:n Crítico ou usuário. 
+  - Avaliação 1:n Episódio, Série ou Episódio.
