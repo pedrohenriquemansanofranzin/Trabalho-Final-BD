@@ -1,3 +1,4 @@
-Críticos (Inserir nota)
-Usuários (Consultar)
-Gestores (Inserir filmes)
+Os atores identificados foram: 
+  - Gestor de conteúdo.  
+  - Crítico. 
+  - Usuários. 
