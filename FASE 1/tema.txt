@@ -1,7 +1,4 @@
-O tema escolhido pelo nosso grupo foi desenvolver uma Plataforma de Avaliação de Filmes/Séries, com as seguintes especificações:
-    Desenvolver um banco de dados para uma plataforma de avaliação de filmes e séries, abordando filmes, séries, usuários, avaliações,
-    elenco, etc.
-Nosso grupo escolheu esse tema pois cada vez mais pessoas tem reclamado que está cad vez mais difícil escolher o que assistir durante o tempo livre,
-então acreditamos que com uma plataforma especifíca em séries/filmes as pessoas vão conseguir poupar tempo escolhendo o que assistir, além disso,
-acreditamos que com essa plataforma as pessoas vão poder compartilhar suas opiniões sem o medo de serem criticadas sobre um determinado
-filme/série, nós queremos ajudar a criar um ambiente de discussão racional sobre o tema.
+O tema escolhido é Plataforma de Avaliação de Filmes/Séries, e o nome 
+do projeto RatingHub, o intuito é desenvolver nosso projeto com base em um tema 
+que gostamos muito e temos como referência plataformas como o MetaCritic e o 
+LetterBox.
