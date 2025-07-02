@@ -13,6 +13,7 @@ const generateToken = (
     iat: moment().unix(),
     exp: expires.unix(),
   };
+
   return jwt.sign(payload, secret);
 };
 

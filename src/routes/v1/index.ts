@@ -1,7 +1,7 @@
 import express from 'express';
 import authRoute from './auth.route';
 import userRoute from './user.route';
-import config from '../../config/config';
+import obraRoute from './obra.route';
 
 const router = express.Router();
 
@@ -13,6 +13,10 @@ const defaultRoutes = [
   {
     path: '/users',
     route: userRoute
+  },
+  {
+    path: '/obras',
+    route: obraRoute
   }
 ];
 

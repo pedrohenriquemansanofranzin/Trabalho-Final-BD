@@ -18,6 +18,9 @@ declare global {
 const verifyToken = async (token: string): Promise<Usuario> => {
   try {
     const payload = jwt.verify(token, config.jwt.secret) as jwt.JwtPayload;
+
+    console.log(payload);
+
     const userId = payload.sub as string;
     
     const user = await prisma.usuario.findUnique({

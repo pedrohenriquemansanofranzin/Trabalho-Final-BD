@@ -29,7 +29,7 @@ LIKE_AVALIACAO(IdObra_Avaliada FKPK, IdUsuario_Avaliador FKPK, IdUsuario_Curtido
 CREATE DATABASE RatingHub;
 
 CREATE TYPE papel_usuario_enum AS ENUM (
-    'GESTOR',
+  'GESTOR',
 	'CRITICO',
 	'NORMAL'
 );

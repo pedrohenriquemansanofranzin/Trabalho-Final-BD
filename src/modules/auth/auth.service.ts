@@ -9,7 +9,7 @@ const login = async (
   email: string,
   password: string
 ): Promise<Omit<Usuario, "senha">> => {
-  const user = await userService.getUserByEmail(email, ["email", "nome_usuario", "tipo_usuario", "senha"]);
+  const user = await userService.getUserByEmail(email, ["id_usuario", "email", "nome_usuario", "tipo_usuario", "senha"]);
   if (!user || !(await isPasswordMatch(password, user.senha as string))) {
     throw new ApiError(httpStatus.UNAUTHORIZED, "Email ou senha inválidos");
   }
