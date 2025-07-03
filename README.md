@@ -1,8 +1,8 @@
-# Rating HUB
+# 🎬 Rating HUB
 
 Projeto desenvolvido para a disciplina de Banco de Dados: uma REST API para avaliação de filmes e séries.
 
-## Alunos
+## 🎓 Alunos
 
 - João Augusto Do Nascimento
 - Allan Custódio Diniz Marques
@@ -10,27 +10,27 @@ Projeto desenvolvido para a disciplina de Banco de Dados: uma REST API para aval
 - Luis Felipe Gomes
 - Orlando Seiti Enokida Junior
 
-## Sobre o Projeto
+## 💡 Sobre o Projeto
 
 O Rating HUB é uma API RESTful construída para gerenciar e servir dados sobre obras audiovisuais como filmes e séries. Usuários podem se cadastrar, avaliar obras, comentar e interagir com avaliações de outros usuários. O sistema foi projetado com uma estrutura de banco de dados relacional e utiliza as tecnologias mais modernas no ecossistema Node.js.
 
-### Principais Ferramentas e Tecnologias
+### 🛠️ Principais Ferramentas e Tecnologias
 
-- **Node.js:** Ambiente de execução JavaScript no servidor.
-- **TypeScript:** Superset do JavaScript que adiciona tipagem estática.
-- **Express:** Framework para construção de APIs em Node.js.
-- **Prisma:** ORM (Object-Relational Mapper) de última geração para Node.js e TypeScript.
-- **PostgreSQL:** Banco de dados relacional utilizado para persistência dos dados.
-- **JWT (JSON Web Tokens):** Para autenticação e autorização baseada em tokens.
-- **JOI:** Biblioteca para validação de esquemas e dados.
+-   **Node.js:** Ambiente de execução JavaScript no servidor.
+-   **TypeScript:** Superset do JavaScript que adiciona tipagem estática.
+-   **Express:** Framework para construção de APIs em Node.js.
+-   **Prisma:** ORM (Object-Relational Mapper) de última geração para Node.js e TypeScript.
+-   **PostgreSQL:** Banco de dados relacional utilizado para persistência dos dados.
+-   **JWT (JSON Web Tokens):** Para autenticação e autorização baseada em tokens.
+-   **JOI:** Biblioteca para validação de esquemas e dados.
 
-## Schema do Banco de Dados (Prisma)
+## 💾 Schema do Banco de Dados (Prisma)
 
 O esquema abaixo define a estrutura do banco de dados, incluindo todas as tabelas, colunas e relacionamentos.
 
 ### Modelos Principais
 
-#### `Obra`
+#### 🎭 `Obra`
 O modelo central que representa uma obra audiovisual (filme ou episódio de série).
 
 ```prisma
@@ -47,7 +47,7 @@ model Obra {
 }
 ```
 
-#### `Usuario`
+#### 👤 `Usuario`
 Representa um usuário do sistema, que pode ter diferentes papéis.
 
 ```prisma
@@ -62,7 +62,7 @@ model Usuario {
 }
 ```
 
-#### `Avaliacao`
+#### 🌟 `Avaliacao`
 Armazena a avaliação (nota e comentário) de um usuário para uma determinada obra.
 
 ```prisma
@@ -82,7 +82,7 @@ model Avaliacao {
 
 ### Modelos de Relacionamento e Específicos
 
-#### `Filme`
+#### 🎥 `Filme`
 Especialização do modelo `Obra` para filmes, com relação a uma franquia.
 
 ```prisma
@@ -97,7 +97,7 @@ model Filme {
 }
 ```
 
-#### `Serie` e `Episodio`
+#### 📺 `Serie` e `Episodio`
 Modelos para representar séries e seus respectivos episódios.
 
 ```prisma
@@ -118,7 +118,7 @@ model Episodio {
 }
 ```
 
-#### `Franquia`
+#### 🔗 `Franquia`
 Agrupa filmes que pertencem à mesma franquia.
 
 ```prisma
@@ -129,7 +129,7 @@ model Franquia {
 }
 ```
 
-#### `CurtidaAvaliacao`
+#### 👍 `CurtidaAvaliacao`
 Permite que usuários curtam as avaliações de outros usuários.
 
 ```prisma
@@ -144,7 +144,7 @@ model CurtidaAvaliacao {
 }
 ```
 
-### Enums
+### 🏷️ Enums
 Tipos enumerados para papéis de usuário e tipos de obra.
 
 ```typescript
@@ -161,11 +161,11 @@ enum TiposObraEnum {
 }
 ```
 
-## Rotas da API (Endpoints)
+## 🔗 Rotas da API (Endpoints)
 
 A seguir estão as principais rotas disponíveis na API.
 
-### Rotas de Obras
+### 📚 Rotas de Obras
 
 -   `GET /obras`: Lista todas as obras com filtros e paginação.
 -   `GET /obras/:idObra`: Retorna uma obra específica pelo seu ID.
@@ -173,13 +173,12 @@ A seguir estão as principais rotas disponíveis na API.
 -   `PATCH /obras/:idObra`: Atualiza os dados de uma obra.
 -   `DELETE /obras/:idObra`: Remove uma obra.
 
-
-### Rotas de Autenticação
+### 🔑 Rotas de Autenticação
 
 -   `POST /auth/login`: Autentica um usuário e retorna um token JWT.
 -   `POST /auth/register`: Registra um novo usuário no sistema.
 
-### Rotas de Usuário
+### 👥 Rotas de Usuário
 
 -   `GET /usuarios`: Lista todos os usuários.
 -   `GET /usuarios/:idUsuario`: Retorna um usuário específico.
@@ -187,7 +186,7 @@ A seguir estão as principais rotas disponíveis na API.
 -   `PATCH /usuarios/:idUsuario`: Atualiza os dados de um usuário.
 -   `DELETE /usuarios/:idUsuario`: Remove um usuário.
 
-### Rotas de Filme
+### 🎞️ Rotas de Filme
 
 -   `GET /filmes`: Lista todos os filmes.
 -   `GET /filmes/:idFilme`: Retorna um filme específico.
@@ -195,7 +194,7 @@ A seguir estão as principais rotas disponíveis na API.
 -   `PATCH /filmes/:idFilme`: Atualiza os dados de um filme.
 -   `DELETE /filmes/:idFilme`: Remove um filme.
 
-### Rotas de Série
+### 🍿 Rotas de Série
 
 -   `GET /series`: Lista todas as séries.
 -   `GET /series/:idSerie`: Retorna uma série específica.
@@ -203,7 +202,7 @@ A seguir estão as principais rotas disponíveis na API.
 -   `PATCH /series/:idSerie`: Atualiza os dados de uma série.
 -   `DELETE /series/:idSerie`: Remove uma série.
 
-### Rotas de Episódio
+### 🎬 Rotas de Episódio
 
 -   `GET /episodios`: Lista todos os episódios.
 -   `GET /episodios/:idEpisodio`: Retorna um episódio específico.
@@ -211,7 +210,7 @@ A seguir estão as principais rotas disponíveis na API.
 -   `PATCH /episodios/:idEpisodio`: Atualiza os dados de um episódio.
 -   `DELETE /episodios/:idEpisodio`: Remove um episódio.
 
-### Rotas de Avaliação
+### ⭐ Rotas de Avaliação
 
 -   `GET /avaliacoes`: Lista todas as avaliações.
 -   `POST /avaliacoes`: Cria uma nova avaliação para uma obra.
