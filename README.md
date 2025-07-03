@@ -170,8 +170,8 @@ A seguir estão as principais rotas disponíveis na API.
 -   `GET /obras`: Lista todas as obras com filtros e paginação.
 -   `GET /obras/:idObra`: Retorna uma obra específica pelo seu ID.
 -   `POST /obras`: Cadastra uma nova obra.
--   `PATCH /obras/:idObra`: Atualiza os dados de um usuário.
--   `DELETE /obras/:idObra`: Remove um usuário.
+-   `PATCH /obras/:idObra`: Atualiza os dados de uma obra.
+-   `DELETE /obras/:idObra`: Remove uma obra.
 
 
 ### Rotas de Autenticação
