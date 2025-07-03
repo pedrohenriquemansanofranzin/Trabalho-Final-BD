@@ -1,97 +1,221 @@
-  Esse é um repositório criado com a intenção de armazenar e expor nosso resultado no trabalho solicitado pelo Prof. Dr. Eduardo Pena na disciplina de Banco de Dados, do 2° período do curso de Bacharel em Ciência Da Computação, na Universidade Tecnológica Federal do Paraná no Campos de Campo Mourão. 
-  Esse trabalho foi feito em um grupo de 5 alunos: Alan, João do Nascimento, Luis Felipe Gomes, Orlando Seiti Enokida Junior, Pedro Henrique Mansano Franzin.
-  O trabalho será dividido em 6 Fases, sendo elas especificadas logo abaixo:
-    --Fase 1. Levantamento de Requisitos. Os grupos devem escolher um dos temas sugeridos e
-    realizar um estudo detalhado do domínio do problema. O objetivo é entender quais
-    dados são relevantes, como as informações se relacionam, e quais operações o sistema
-    deverá realizar. Essa fase deve incluir:
-    • Definição do tema escolhido e uma breve justificativa de sua relevância ou interesse.
-    • Identificação dos atores envolvidos no domínio (ex: cliente, administrador, fornecedor, etc.).
-    • Descrição das entidades principais que farão parte do banco de dados.
-    • Sugestão inicial de possíveis relacionamentos entre entidades.
-    • Levantamento dos requisitos funcionais, ou seja, o que o sistema deve ser capaz
-    de fazer.
-    • Alinhamento: Antes de iniciar a próxima fase, os grupos devem apresentar um
-    resumo dos requisitos ao professor para validação. Esse alinhamento servirá para
-    garantir que:
-    – O escopo do projeto está adequado à carga horária e objetivos da disciplina.
-    – O nível de complexidade está compatível com a fase de formação dos alunos.
-    – Os requisitos possibilitam o uso de técnicas de modelagem e consulta em
-    banco de dados.
-    Entregável da Fase 1: Texto descritivo bem redigido e formatado com os itens acima.
-  --Fase 2. Projeto Conceitual do Banco de Dados (Modelo ER)
-    Com base no levantamento de requisitos previamente validado, os grupos deverão
-    elaborar o modelo conceitual do banco de dados utilizando o Diagrama EntidadeRelacionamento (ER).
-    Elementos obrigatórios no diagrama:
-    • Todas as entidades identificadas na fase anterior, com seus respectivos atributos.
-    • Definição clara das chaves primárias de cada entidade.
-    • Representação de relacionamentos
-    • Inclusão de atributos nos relacionamentos, se aplicável.
-    • Distinção entre entidades fortes e fracas, se houver.
-    Ferramentas e Padrão de modelagem: O diagrama deve ser construído utilizando uma
-    ferramenta compatível com os Diagramas ER vistos em sala. Sugiro o draw.io, latex com
-    tikz, ou o BR Modelo (https://www.brmodeloweb.com/lang/pt-br/index.html) . Os
-    grupos devem seguir os exemplos em aula, respeitando a simbologia clássica (retângulos para entidades, losangos para relacionamentos, elipses para atributos, etc.).
-    Entregável da Fase 2: Modelo Conceitual do Banco de Dados (Diagrama ER), exportado em formato PDF ou imagem de alta resolução.
-  --Fase 3. Mapeamento do Modelo de Dados (Projeto Lógico do Banco de Dados).
-    Nesta etapa, os grupos devem transformar o modelo conceitual (Diagrama ER) em
-    modelo lógico relacional. Isso envolve definir as tabelas, listar seus atributos e indicar
-    as chaves primárias e estrangeiras. Utilize os procedimentos de mapeamento vistos em
-    aula.
-    Exemplo:
-    CLIENTE(id_cliente, nome, email)
-    PEDIDO(id_pedido, id_cliente (referencia Cliente), data)
-    Entregável da Fase 3: Arquivo texto com o modelo lógico do banco de dados: tabelas,
-    atributos, chaves primárias (PK) e estrangeiras (FK).
-  --Fase 4. Normalização do Banco de Dados na 3ª Forma Normal
-    Os grupos devem aplicar as regras de normalização para garantir que o modelo lógico
-    esteja consistente, sem redundâncias e livre de anomalias. O resultado deve ser um
-    modelo relacional na 3ª Forma Normal (3FN), conforme discutido em aula.
-    A entrega deve conter as tabelas já ajustadas e normalizadas, com indicação clara das
-    chaves primárias e estrangeiras.
-    Entregável da Fase 4: Arquivo com as tabelas normalizadas até a 3ª Forma Normal
-    (3FN), com identificação de PK e FK. Use o mesmo formato usado na fase 3. Inclua
-    também todas as dependências funcionais identificadas nas tabelas.
-  --Fase 5. Implementação em SQL Nesta etapa, os grupos devem criar o esquema físico do banco
-de dados, implementando o modelo lógico normalizado em um Sistema de Gerenciamento de Banco de Dados (SGBD). Os alunos deverão:
-    • Criar todas as tabelas para o PostgreSQL utilizando SQL/DDL (Data Definition
-    Language).
-    • Implementar todas as constraints necessárias: chaves primárias, chaves estrangeiras, constraints de unicidade, NOT NULL, CHECK, etc.
-    • Preencher as tabelas com dados de teste representativos (pelo menos 10 registros
-    em cada tabela principal).
-    • Cada integrante do grupo deve desenvolver pelo menos 3 consultas SQL significativa que demonstre as funcionalidades do banco de dados.
-    Entregável da Fase 5: Script SQL contendo a criação de todas as tabelas (CREATE TABLE), inserção de dados de teste (INSERT INTO) e as consultas SQL desenvolvidas,
-    com comentários explicativos.
-  --Fase 6. Desenvolvimento com ORM Nesta fase, os alunos devem desenvolver uma camada
-de acesso a dados utilizando Object-Relational Mapping (ORM) para o banco de dados
-implementado na fase anterior. Esta etapa compreende:
-    (a) Mapeamento das Entidades:
-    • Criar classes que representam as tabelas do banco de dados do projeto anterior.
-    • Utilizar um framework ORM (SQLAlchemy para Python ou Hibernate para
-    Java) para mapear as relações entre as classes e as tabelas do banco de dados.
-    • Tomar cuidado especial ao mapear relações muitos-para-muitos (NxN), relações um-para-muitos (1xN) e relações um-para-um (1x1).
-    • Realizar as decisões de projeto necessárias para refletir a estrutura do banco
-    de dados original sem alterá-la. Ou seja, o código ORM não pode alterar o
-    esquema do Banco de dados projetado/criado nas fases 4 e 5.
-    (b) Operações CRUD:
-    • Implementar código para conectar ao banco de dados existente utilizando as
-    classes mapeadas.
-    • Desenvolver funcionalidades para inserir (Create), recuperar (Read), atualizar (Update) e excluir (Delete) registros no banco de dados.
-    • Garantir que as operações de manipulação de dados respeitem as constraints
-    do banco de dados.
-    (c) Consultas:
-    • Cada aluno deve implementar pelo menos 3 consultas utilizando a API de
-    consulta do ORM escolhido.
-    • As consultas devem demonstrar a capacidade de manipular dados através dos
-    relacionamentos entre entidades.
-    Entregável da Fase 6:
-    • Código fonte completo do projeto.
-    • Arquivo README detalhado contendo:
-    – Instruções passo a passo para instalação das dependências necessárias
-    – Procedimento para conexão com o banco de dados
-    – Comandos para execução do código e testes das funcionalidades
-    • Scripts ou instruções para criação e população do banco de dados, caso necessário.
-  --Avaliação Final
-    A nota final do projeto será composta pela entrega de cada fase, considerando pontualidade,
-    qualidade técnica e participação individual, conforme a tabela a seguir..
-    ![image](https://github.com/user-attachments/assets/3e7a773b-f8ac-4f8d-ae9c-f5e0145df5ec)
+# Rating HUB
+
+Projeto desenvolvido para a disciplina de Banco de Dados: uma REST API para avaliação de filmes e séries.
+
+## Alunos
+
+- João Augusto Do Nascimento
+- Allan Custódio Diniz Marques
+- Pedro Henrique Mansano Franzin
+- Luis Felipe Gomes
+- Orlando Seiti Enokida Junior
+
+## Sobre o Projeto
+
+O Rating HUB é uma API RESTful construída para gerenciar e servir dados sobre obras audiovisuais como filmes e séries. Usuários podem se cadastrar, avaliar obras, comentar e interagir com avaliações de outros usuários. O sistema foi projetado com uma estrutura de banco de dados relacional e utiliza as tecnologias mais modernas no ecossistema Node.js.
+
+### Principais Ferramentas e Tecnologias
+
+- **Node.js:** Ambiente de execução JavaScript no servidor.
+- **TypeScript:** Superset do JavaScript que adiciona tipagem estática.
+- **Express:** Framework para construção de APIs em Node.js.
+- **Prisma:** ORM (Object-Relational Mapper) de última geração para Node.js e TypeScript.
+- **PostgreSQL:** Banco de dados relacional utilizado para persistência dos dados.
+- **JWT (JSON Web Tokens):** Para autenticação e autorização baseada em tokens.
+- **JOI:** Biblioteca para validação de esquemas e dados.
+
+## Schema do Banco de Dados (Prisma)
+
+O esquema abaixo define a estrutura do banco de dados, incluindo todas as tabelas, colunas e relacionamentos.
+
+### Modelos Principais
+
+#### `Obra`
+O modelo central que representa uma obra audiovisual (filme ou episódio de série).
+
+```prisma
+model Obra {
+  id_obra    Int           @id @default(autoincrement())
+  titulo     String        @db.VarChar(255)
+  sinopse    String
+  lancamento DateTime      @db.Date
+  tipo_obra  TiposObraEnum // FILME, SERIE, EPISODIO
+  avaliacao  Avaliacao[]
+  episodio   Episodio[]
+  filme      Filme?
+  serie      Serie[]
+}
+```
+
+#### `Usuario`
+Representa um usuário do sistema, que pode ter diferentes papéis.
+
+```prisma
+model Usuario {
+  id_usuario        Int                @id @default(autoincrement())
+  nome_usuario      String             @db.VarChar(100)
+  email             String             @unique @db.VarChar(150)
+  senha             String             @db.VarChar(512)
+  tipo_usuario      PapelUsuarioEnum?  @default(NORMAL) // GESTOR, CRITICO, NORMAL
+  avaliacao         Avaliacao[]
+  curtida_avaliacao CurtidaAvaliacao[]
+}
+```
+
+#### `Avaliacao`
+Armazena a avaliação (nota e comentário) de um usuário para uma determinada obra.
+
+```prisma
+model Avaliacao {
+  id_obra             Int
+  id_usuario          Int
+  nota                Int
+  comentario          String             @db.VarChar(512)
+  data_hora_avaliacao DateTime?          @default(now())
+  obra                Obra               @relation(fields: [id_obra], references: [id_obra])
+  usuario             Usuario            @relation(fields: [id_usuario], references: [id_usuario])
+  curtida_avaliacao   CurtidaAvaliacao[]
+
+  @@id([id_obra, id_usuario])
+}
+```
+
+### Modelos de Relacionamento e Específicos
+
+#### `Filme`
+Especialização do modelo `Obra` para filmes, com relação a uma franquia.
+
+```prisma
+model Filme {
+  id_franquia Int
+  edicao      Int
+  id_obra     Int      @unique
+  franquia    Franquia @relation(fields: [id_franquia], references: [id_franquia])
+  obra        Obra     @relation(fields: [id_obra], references: [id_obra])
+
+  @@id([id_franquia, edicao])
+}
+```
+
+#### `Serie` e `Episodio`
+Modelos para representar séries e seus respectivos episódios.
+
+```prisma
+model Serie {
+  id_serie Int  @id @default(autoincrement())
+  id_obra  Int
+  obra     Obra @relation(fields: [id_obra], references: [id_obra])
+}
+
+model Episodio {
+  id_serie        Int
+  temporada       Int
+  numero_episodio Int
+  id_obra         Int
+  obra            Obra @relation(fields: [id_obra], references: [id_obra])
+
+  @@id([id_serie, temporada, numero_episodio])
+}
+```
+
+#### `Franquia`
+Agrupa filmes que pertencem à mesma franquia.
+
+```prisma
+model Franquia {
+  id_franquia Int     @id @default(autoincrement())
+  nome        String  @db.VarChar(255)
+  filme       Filme[]
+}
+```
+
+#### `CurtidaAvaliacao`
+Permite que usuários curtam as avaliações de outros usuários.
+
+```prisma
+model CurtidaAvaliacao {
+  id_obra_avaliada     Int
+  id_usuario_avaliador Int
+  id_usuario_curtidor  Int
+  avaliacao            Avaliacao @relation(fields: [id_obra_avaliada, id_usuario_avaliador], references: [id_obra, id_usuario])
+  usuario              Usuario   @relation(fields: [id_usuario_curtidor], references: [id_usuario])
+
+  @@id([id_obra_avaliada, id_usuario_avaliador, id_usuario_curtidor])
+}
+```
+
+### Enums
+Tipos enumerados para papéis de usuário e tipos de obra.
+
+```typescript
+enum PapelUsuarioEnum {
+  GESTOR
+  CRITICO
+  NORMAL
+}
+
+enum TiposObraEnum {
+  SERIE
+  EPISODIO
+  FILME
+}
+```
+
+## Rotas da API (Endpoints)
+
+A seguir estão as principais rotas disponíveis na API.
+
+### Rotas de Obras
+
+-   `GET /obras`: Lista todas as obras com filtros e paginação.
+-   `GET /obras/:idObra`: Retorna uma obra específica pelo seu ID.
+-   `POST /obras`: Cadastra uma nova obra.
+-   `PATCH /obras/:idObra`: Atualiza os dados de um usuário.
+-   `DELETE /obras/:idObra`: Remove um usuário.
+
+
+### Rotas de Autenticação
+
+-   `POST /auth/login`: Autentica um usuário e retorna um token JWT.
+-   `POST /auth/register`: Registra um novo usuário no sistema.
+
+### Rotas de Usuário
+
+-   `GET /usuarios`: Lista todos os usuários.
+-   `GET /usuarios/:idUsuario`: Retorna um usuário específico.
+-   `POST /usuarios`: Cria um novo usuário (geralmente usado por gestores).
+-   `PATCH /usuarios/:idUsuario`: Atualiza os dados de um usuário.
+-   `DELETE /usuarios/:idUsuario`: Remove um usuário.
+
+### Rotas de Filme
+
+-   `GET /filmes`: Lista todos os filmes.
+-   `GET /filmes/:idFilme`: Retorna um filme específico.
+-   `POST /filmes`: Cria um novo filme.
+-   `PATCH /filmes/:idFilme`: Atualiza os dados de um filme.
+-   `DELETE /filmes/:idFilme`: Remove um filme.
+
+### Rotas de Série
+
+-   `GET /series`: Lista todas as séries.
+-   `GET /series/:idSerie`: Retorna uma série específica.
+-   `POST /series`: Cria uma nova série.
+-   `PATCH /series/:idSerie`: Atualiza os dados de uma série.
+-   `DELETE /series/:idSerie`: Remove uma série.
+
+### Rotas de Episódio
+
+-   `GET /episodios`: Lista todos os episódios.
+-   `GET /episodios/:idEpisodio`: Retorna um episódio específico.
+-   `POST /episodios`: Cria um novo episódio.
+-   `PATCH /episodios/:idEpisodio`: Atualiza os dados de um episódio.
+-   `DELETE /episodios/:idEpisodio`: Remove um episódio.
+
+### Rotas de Avaliação
+
+-   `GET /avaliacoes`: Lista todas as avaliações.
+-   `POST /avaliacoes`: Cria uma nova avaliação para uma obra.
+-   `PATCH /avaliacoes/`: Atualiza uma avaliação existente.
+-   `DELETE /avaliacoes/`: Remove uma avaliação.
+-   `POST /avaliacoes/curtir`: Adiciona uma curtida a uma avaliação.
+-   `DELETE /avaliacoes/curtir`: Remove uma curtida de uma avaliação.

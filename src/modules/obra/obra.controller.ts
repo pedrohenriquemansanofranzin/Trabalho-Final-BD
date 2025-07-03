@@ -18,7 +18,7 @@ const createObra = catchAsync(async (req, res) => {
 
 const getObras = catchAsync(async (req, res) => {
   const filter = pick(req.query, ['titulo', 'tipo_obra']);
-  const options = pick(req.query, ['sortBy', 'limit', 'page']);
+  const options = pick(req.query, ['sortBy', 'limit', 'page', 'sortType']);
   const result = await obraService.queryObras(filter, options);
   res.send(result);
 });
